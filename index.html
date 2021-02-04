@@ -1,0 +1,188 @@
+<!-------------------------------------------------------------------------------->
+<!-- Fecha Creación: 03 Febrero 2021.                                           -->
+<!-- Autor:          Iván Fonseca Castro                                        -->
+<!--                                                                            -->
+<!-- Descripción:    Página principal del sitio web, corresponde a un ejercicio -->
+<!--                 que simula un formulario de pago.                          -->
+<!-------------------------------------------------------------------------------->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Iván Fonseca Castro">
+    <meta name="keywords" content="form, payment, example">
+    <meta name="description" content="Code - HTML5 Form">
+
+    <!-- Referencia a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Referencia a hoja de estilos propia -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Payment form example</title>
+</head>
+
+<body>
+    <!-- Contenedor principal que contiene el formulario de pago -->
+    <div class="container">
+        <!-- Título del formulario -->
+        <div class="row paymentTitle">
+            <h2>Payment form example</h2>
+        </div>
+
+        <!-- Formulario principal de pago -->
+        <form>
+            <div class="row m-3">
+                <div class="alert alert-danger" role="alert">
+                    Some fields are missing
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCard">Card #</label>
+                    <input type="number" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXXXXX">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputCVC">CVC #</label>
+                    <input type="number" class="form-control" id="inputCVC" placeholder="0000">
+                </div>
+                <div class="form-group col-md-4">
+                    <div class="row">
+                        <div class="form-group col-1 d-flex align-items-end pb-3">
+                            <label for="inputAmount"></label>
+                            <i class="fas fa-dollar-sign fa-1x" aria-hidden="true"></i>
+                        </div>
+                        <div class="form-group col-11 inputAmountTitle">
+                            <label for="inputAmount">Amount</label>
+                            <input type="number" class="form-control" id="inputAmount" placeholder="Amount">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+              <option selected>Pick a state</option>
+              <option>State 1</option>
+              <option>State 2</option>
+              <option>State 3</option>
+              <option>State 4</option>
+              <option>State 5</option>
+              <option>State 6</option>
+              <option>State 7</option>
+            </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputPostalCode">Postal Code</label>
+                    <input type="text" class="form-control" id="inputPostalCode">
+                </div>
+            </div>
+
+            <!-- Tipos de Pago -->
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputInfoCard">We accept:</label>
+                        <div class="container paymentType">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                <label class="form-check-label" for="inlineRadio1">
+                                    <a href="#"><i class="fab fa-cc-mastercard fa-3x" aria-hidden="true"></i></a>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">
+                                    <a href="#"><i class="fab fa-cc-visa fa-3x" aria-hidden="true"></i></a>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">
+                                    <a href="#"><i class="fab fa-cc-diners-club fa-3x" aria-hidden="true"></i></a>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">
+                                    <a href="#"><i class="fab fa-cc-amex fa-3x" aria-hidden="true"></i></a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputMessage">Message</label>
+                        <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+                        <p id="messagesNotes">Add any notes here.</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Botones de acción del formulario -->
+        <div class="row footerPayment">
+            <div class="form-group col-md-12 d-flex justify-content-end">
+                <button type="button" class="btn btn-secondary mr-1">Cancel</button>
+                <button type="submit" class="btn btn-primary ml-1">Send</button>
+            </div>
+        </div>
+        <!-- Formulario principal de pago -->
+    </div>
+
+    <div class="mt-5">
+
+    </div>
+
+    <!-- Referencia a librerías Javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Validación para no permitir ingresar más de 4 caracteres en el camo de CVC
+        $(document).ready(function() {
+            $("#inputCVC").keypress(function() {
+                if (this.value.length == 4) {
+                    return false;
+                }
+            })
+        })
+
+        // Validación para no permitir ingresar más de 16 caracteres en el camo de CARD
+        $(document).ready(function() {
+            $("#inputCard").keypress(function() {
+                if (this.value.length == 16) {
+                    return false;
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

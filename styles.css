@@ -1,0 +1,66 @@
+/*******************************************************************************/
+/* Fecha Creación: 04 Febrero 2021.                                            */
+/* Autor:          Iván Fonseca Castro                                         */
+/*                                                                             */
+/* Descripción:    Hoja principal de estilos, permite personalizar los estilos */
+/*                 propios a utilizar en los componentes del sitio Web.        */
+/*******************************************************************************/
+
+.container{
+   margin-top: 20px;
+   background: white;
+   border: solid 1px rgb(223,223,223);
+   border-radius: 7px;
+}
+
+.alert {
+    width:100%;
+ }
+
+ .botones{
+     background: white;
+     width: 100%;
+ }
+
+ .paymentType{
+     background: gray;
+     padding: 5px;
+    border-radius: 5px;
+    background: gray
+ }
+
+ .paymentType .fa-3x {
+    color: white
+}
+
+
+ .fa {
+     background: white;
+ }
+
+ .paymentTitle{
+     background: rgb(247,247,247);
+     padding: 5px;
+     border: solid 1px rgb(223,223,223);
+     border-radius: 7px 7px 0px 0px;
+ }
+
+ .footerPayment{
+    background: rgb(247,247,247);
+    padding-top: 15px;
+    border: solid 1px rgb(223,223,223);
+    border-radius: 0px 0px 7px 7px;
+}
+
+.inputAmountTitle{
+    padding: 0 15px 0 0;
+}
+
+button{
+    width: 70px;
+}
+
+#messagesNotes{
+    color: rgb(108,117,125);
+    font-size: small;
+}
